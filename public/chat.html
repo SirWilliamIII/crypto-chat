@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Talk Cock</title>
+</head>
+
+<body class="chat">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
+        <h3>Don't worry, this is all encrypted!</h3>
+        <p class="lead">Feel free, they cannot see you...</p>
+        <div id="users" class="form-field"></div>
+
+        <div class="chat_main">
+            <span id="messages" class="chat_messages"></span>
+            <br>
+            <br>
+            <form action="submit" method="POST" id="message-form">
+                <label class="spacing">Message</label>
+                <span>
+                    <input class="spacing" type="text" name="message" autofocus autocomplete="off" />
+
+                    <button type="submit" class="btn btn-success btn-toolbar spacing">Send</button>
+                </span>
+            </form>
+
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="/js/libs/deparams.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>
