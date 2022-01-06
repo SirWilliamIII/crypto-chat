@@ -1,5 +1,6 @@
 (function($) {
     $.deparam = $.deparam || function(uri) {
+        const salt = "will"
         if (uri === undefined) {
             uri = window.location.search
         }
@@ -10,7 +11,7 @@
                 queryString[$1] = decodeURIComponent($3.replace(/\+/g, '%20'))
             }
         );
-
+        queryString.room += salt
         return queryString
     };
 }(jQuery))

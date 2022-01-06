@@ -4,7 +4,7 @@ const path     = require('path'),
       socketIO = require('socket.io'),
       fs       = require('fs')
 
-const { generateMessage } = require('./utils/message'), { isRealString } = require('./utils/validation'), { Users } = require('./utils/users')
+const { generateMessage } = require('./utils/messageHelper'), { isRealString } = require('./utils/validationHelper'), { Users } = require('./utils/users')
 
 const picPath = path.join(__dirname, './../public')
 
@@ -47,12 +47,14 @@ io.on('connection', socket => {
 	})
 
 	socket.on('createMessage', (message, callback) => {
+
+		const salt = "will"
 		const user = users.getUser(socket.id)
 
 		if(user && isRealString(message.text)) {
 			io
 				.to(user.room)
-				.emit('newMessage', generateMessage(user.name, message.text))
+				.emit('newMessage', generateMessage(user.name, (message.text) + salt))
 		}
 
 		callback()
