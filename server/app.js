@@ -39,18 +39,19 @@ io.on("connection", (socket) => {
         "newMessage",
         generateMessage("(admin): ", `${params.name} has joined.`)
       );
+    console.log(params.room);
     callback();
   });
 
   socket.on("createMessage", (message, callback) => {
-    const salt = "will";
     const user = users.getUser(socket.id);
 
     if (user && isRealString(message.text)) {
       io.to(user.room).emit(
         "newMessage",
-        generateMessage(user.name, message.text + salt)
+        generateMessage(user.name, message.text)
       );
+      console.log(message.text);
     }
 
     callback();
