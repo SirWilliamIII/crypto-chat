@@ -1,28 +1,53 @@
 .form-field {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 h3 {
-    font-style: italic;
-    color: #333;
+  font-style: italic;
+  color: #333;
 }
 
 .spacing {
-    margin: auto;
+  margin: auto;
 }
 
-.pic {
-    padding: 10px;
-    margin:  10px;
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Full viewport height */
+  text-align: center;
+  /* Center text for aesthetics */
 }
 
-.logo {
-    height:            100px;
-    background:  transparent;
-    -webkit-animation: spin 20s linear infinite;
-    -moz-animation:    spin 20s linear infinite;
-    animation:         spin 20s linear infinite;
+/* Additional styles for the form and its elements for better appearance */
+
+form {
+  margin: auto;
+  /* Center the form in the flex container */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Optional: adds a subtle shadow */
+  border-radius: 5px;
+  /* Optional: rounds the corners */
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

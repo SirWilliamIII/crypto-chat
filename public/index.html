@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>The Home of Chit Chat</title>
-        <link rel="stylesheet" type="text/css"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>The Home of Chit Chat</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 text-center">
-                    <form action="/chat.html">
-                        <div class="form-field">
-                            <h3>Join the Chat</h3>
-                            <br>
-                        </div>
-                        <div class="form-field">
-                            <label for="name">Name</label> <input type="text" name="name" autofocus/>
-                        </div>
-                        <div class="form-field">
-                            <label for="room">Room</label> <input type="text" name="room" autofocus/>
-                        </div>
-                        <div class="form-field">
-                            <button class="btn btn-success btn-block">Join</button>
-                        </div>
-                    </form>
-                    <br><br>
-                    <div class="container-fluid">
-
-                            <ul><h1 id=openRooms></h1>
-                                <li>room 1</li>
-                            </ul>
-
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4 text-center">
+                <form action="/chat.html">
+                    <div class="form-field">
+                        <h3>Join the Chat</h3>
+                        <br>
                     </div>
+                    <div class="form-field">
+                        <label for="name">Name</label> <input type="text" name="name" autofocus />
+                    </div>
+                    <div class="form-field">
+                        <label for="room">Room</label> <input type="text" name="room" autofocus />
+                    </div>
+                    <div class="form-field">
+                        <button class="btn btn-success btn-block">Join</button>
+                    </div>
+                </form>
+                <br><br>
+                <div class="container-fluid">
+
+                    <ul>
+                        <h1 id=openRooms></h1>
+                        <li>room 1</li>
+                    </ul>
 
                 </div>
+
             </div>
         </div>
+    </div>
 
-        <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 
 
-    </body>
+</body>
 
 </html>
