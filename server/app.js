@@ -10,7 +10,7 @@ const { generateMessage } = require("./utils/messageHelper"),
 
 const picPath = path.join(__dirname, "./../public");
 
-const port = process.env.PORT || 3000,
+const PORT = process.env.PORT || 3000,
   app = express(),
   server = http.createServer(app),
   io = socketIO(server);
@@ -66,6 +66,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(port, "0.0.0.0", () => {
-  console.log(`Server listening on port ${port}`);
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
