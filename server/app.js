@@ -10,7 +10,7 @@ const { generateMessage } = require("./utils/messageHelper"),
 
 const picPath = path.join(__dirname, "./../public");
 
-const port = process.env.PORT || 8000,
+const port = process.env.PORT || 3000,
   app = express(),
   server = http.createServer(app),
   io = socketIO(server);
